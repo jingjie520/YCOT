@@ -7,5 +7,7 @@ namespace YCOT.DAL
 {
     public class Class1
     {
+
+
     }
 }
