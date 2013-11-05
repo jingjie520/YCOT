@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // 有关程序集的常规信息通过以下
 // 特性集控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("YCOT.DAL")]
+[assembly: AssemblyTitle("YCOT.UI.WinForm")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Sky123.Org")]
-[assembly: AssemblyProduct("YCOT.DAL")]
+[assembly: AssemblyProduct("YCOT.UI.WinForm")]
 [assembly: AssemblyCopyright("Copyright © Sky123.Org 2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 如果此项目向 COM 公开，则下列 GUID 用于类型库的 ID
-[assembly: Guid("6ae97b9e-68e8-47a1-9afd-ac7ae6df5837")]
+[assembly: Guid("72dd0ab8-f825-47ad-becf-b392a59b077f")]
 
 // 程序集的版本信息由下面四个值组成:
 //
