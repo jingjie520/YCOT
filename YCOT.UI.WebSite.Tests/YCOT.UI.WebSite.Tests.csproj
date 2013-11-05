@@ -106,6 +106,15 @@
   <ItemGroup>
     <Content Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\YCOT.UI.WebSite\YCOT.UI.WebSite.csproj">
+      <Project>{BCC6D3EC-8172-44F5-8FC0-FF916EC48128}</Project>
+      <Name>YCOT.UI.WebSite</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

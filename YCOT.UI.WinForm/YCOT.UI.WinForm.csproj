@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>72dd0ab8-f825-47ad-becf-b392a59b077f</ProjectGuid>
+    <ProjectGuid>{02051BA1-F929-45E6-A40B-19EF49323159}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>YCOT.UI.WinForm</RootNamespace>
