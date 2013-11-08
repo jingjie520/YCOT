@@ -1,0 +1,465 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="YCOT.DAL.Models.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="YCOTDALModelsStoreContainer">
+          <EntitySet Name="Admins" EntityType="YCOT.DAL.Models.Store.Admins" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Auth_AdminControllerAction" EntityType="YCOT.DAL.Models.Store.Auth_AdminControllerAction" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Auth_AdminRole" EntityType="YCOT.DAL.Models.Store.Auth_AdminRole" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Auth_ControllerActionRole" EntityType="YCOT.DAL.Models.Store.Auth_ControllerActionRole" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Auth_ControllerActions" EntityType="YCOT.DAL.Models.Store.Auth_ControllerActions" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Auth_Roles" EntityType="YCOT.DAL.Models.Store.Auth_Roles" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="sysdiagrams" EntityType="YCOT.DAL.Models.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Auth_AdminControllerAction_Admins" Association="YCOT.DAL.Models.Store.FK_Auth_AdminControllerAction_Admins">
+            <End Role="Admins" EntitySet="Admins" />
+            <End Role="Auth_AdminControllerAction" EntitySet="Auth_AdminControllerAction" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Auth_AdminControllerAction_Auth_ControllerActions" Association="YCOT.DAL.Models.Store.FK_Auth_AdminControllerAction_Auth_ControllerActions">
+            <End Role="Auth_ControllerActions" EntitySet="Auth_ControllerActions" />
+            <End Role="Auth_AdminControllerAction" EntitySet="Auth_AdminControllerAction" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Auth_AdminRole_Admins" Association="YCOT.DAL.Models.Store.FK_Auth_AdminRole_Admins">
+            <End Role="Admins" EntitySet="Admins" />
+            <End Role="Auth_AdminRole" EntitySet="Auth_AdminRole" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Auth_AdminRole_Auth_Roles" Association="YCOT.DAL.Models.Store.FK_Auth_AdminRole_Auth_Roles">
+            <End Role="Auth_Roles" EntitySet="Auth_Roles" />
+            <End Role="Auth_AdminRole" EntitySet="Auth_AdminRole" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Auth_ControllerActionRole_Auth_ControllerActions" Association="YCOT.DAL.Models.Store.FK_Auth_ControllerActionRole_Auth_ControllerActions">
+            <End Role="Auth_ControllerActions" EntitySet="Auth_ControllerActions" />
+            <End Role="Auth_ControllerActionRole" EntitySet="Auth_ControllerActionRole" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Auth_ControllerActionRole_Auth_Roles" Association="YCOT.DAL.Models.Store.FK_Auth_ControllerActionRole_Auth_Roles">
+            <End Role="Auth_Roles" EntitySet="Auth_Roles" />
+            <End Role="Auth_ControllerActionRole" EntitySet="Auth_ControllerActionRole" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Admins">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="PassWord" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="Status" Type="int" />
+        </EntityType>
+        <EntityType Name="Auth_AdminControllerAction">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="AdminID" Type="int" Nullable="false" />
+          <Property Name="ControllerActionID" Type="int" Nullable="false" />
+          <Property Name="IsRefuse" Type="bit" />
+        </EntityType>
+        <EntityType Name="Auth_AdminRole">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="AdminID" Type="int" Nullable="false" />
+          <Property Name="RoleID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Auth_ControllerActionRole">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RoleID" Type="int" Nullable="false" />
+          <Property Name="ControllerActionID" Type="int" Nullable="false" />
+          <Property Name="IsRefuse" Type="bit" />
+        </EntityType>
+        <EntityType Name="Auth_ControllerActions">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsController" Type="bit" />
+          <Property Name="IsAllowedNoneRoles" Type="bit" />
+          <Property Name="IsAllowedAllRoles" Type="bit" />
+          <Property Name="ControllerName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Auth_Roles">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <Association Name="FK_Auth_AdminControllerAction_Admins">
+          <End Role="Admins" Type="YCOT.DAL.Models.Store.Admins" Multiplicity="1" />
+          <End Role="Auth_AdminControllerAction" Type="YCOT.DAL.Models.Store.Auth_AdminControllerAction" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Admins">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Auth_AdminControllerAction">
+              <PropertyRef Name="ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Auth_AdminControllerAction_Auth_ControllerActions">
+          <End Role="Auth_ControllerActions" Type="YCOT.DAL.Models.Store.Auth_ControllerActions" Multiplicity="1" />
+          <End Role="Auth_AdminControllerAction" Type="YCOT.DAL.Models.Store.Auth_AdminControllerAction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Auth_ControllerActions">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Auth_AdminControllerAction">
+              <PropertyRef Name="ControllerActionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Auth_AdminRole_Admins">
+          <End Role="Admins" Type="YCOT.DAL.Models.Store.Admins" Multiplicity="1" />
+          <End Role="Auth_AdminRole" Type="YCOT.DAL.Models.Store.Auth_AdminRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Admins">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Auth_AdminRole">
+              <PropertyRef Name="AdminID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Auth_AdminRole_Auth_Roles">
+          <End Role="Auth_Roles" Type="YCOT.DAL.Models.Store.Auth_Roles" Multiplicity="1" />
+          <End Role="Auth_AdminRole" Type="YCOT.DAL.Models.Store.Auth_AdminRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Auth_Roles">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Auth_AdminRole">
+              <PropertyRef Name="RoleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Auth_ControllerActionRole_Auth_ControllerActions">
+          <End Role="Auth_ControllerActions" Type="YCOT.DAL.Models.Store.Auth_ControllerActions" Multiplicity="1" />
+          <End Role="Auth_ControllerActionRole" Type="YCOT.DAL.Models.Store.Auth_ControllerActionRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Auth_ControllerActions">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Auth_ControllerActionRole">
+              <PropertyRef Name="ControllerActionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Auth_ControllerActionRole_Auth_Roles">
+          <End Role="Auth_Roles" Type="YCOT.DAL.Models.Store.Auth_Roles" Multiplicity="1" />
+          <End Role="Auth_ControllerActionRole" Type="YCOT.DAL.Models.Store.Auth_ControllerActionRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Auth_Roles">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Auth_ControllerActionRole">
+              <PropertyRef Name="RoleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="YCOT.DAL.Models" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="YCOT_DataEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Admins" EntityType="YCOT.DAL.Models.Admins" />
+          <EntitySet Name="Auth_AdminControllerAction" EntityType="YCOT.DAL.Models.Auth_AdminControllerAction" />
+          <EntitySet Name="Auth_AdminRole" EntityType="YCOT.DAL.Models.Auth_AdminRole" />
+          <EntitySet Name="Auth_ControllerActionRole" EntityType="YCOT.DAL.Models.Auth_ControllerActionRole" />
+          <EntitySet Name="Auth_ControllerActions" EntityType="YCOT.DAL.Models.Auth_ControllerActions" />
+          <EntitySet Name="Auth_Roles" EntityType="YCOT.DAL.Models.Auth_Roles" />
+          <EntitySet Name="sysdiagrams" EntityType="YCOT.DAL.Models.sysdiagrams" />
+          <AssociationSet Name="FK_Auth_AdminControllerAction_Admins" Association="YCOT.DAL.Models.FK_Auth_AdminControllerAction_Admins">
+            <End Role="Admins" EntitySet="Admins" />
+            <End Role="Auth_AdminControllerAction" EntitySet="Auth_AdminControllerAction" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Auth_AdminRole_Admins" Association="YCOT.DAL.Models.FK_Auth_AdminRole_Admins">
+            <End Role="Admins" EntitySet="Admins" />
+            <End Role="Auth_AdminRole" EntitySet="Auth_AdminRole" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Auth_AdminControllerAction_Auth_ControllerActions" Association="YCOT.DAL.Models.FK_Auth_AdminControllerAction_Auth_ControllerActions">
+            <End Role="Auth_ControllerActions" EntitySet="Auth_ControllerActions" />
+            <End Role="Auth_AdminControllerAction" EntitySet="Auth_AdminControllerAction" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Auth_AdminRole_Auth_Roles" Association="YCOT.DAL.Models.FK_Auth_AdminRole_Auth_Roles">
+            <End Role="Auth_Roles" EntitySet="Auth_Roles" />
+            <End Role="Auth_AdminRole" EntitySet="Auth_AdminRole" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Auth_ControllerActionRole_Auth_ControllerActions" Association="YCOT.DAL.Models.FK_Auth_ControllerActionRole_Auth_ControllerActions">
+            <End Role="Auth_ControllerActions" EntitySet="Auth_ControllerActions" />
+            <End Role="Auth_ControllerActionRole" EntitySet="Auth_ControllerActionRole" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Auth_ControllerActionRole_Auth_Roles" Association="YCOT.DAL.Models.FK_Auth_ControllerActionRole_Auth_Roles">
+            <End Role="Auth_Roles" EntitySet="Auth_Roles" />
+            <End Role="Auth_ControllerActionRole" EntitySet="Auth_ControllerActionRole" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Admins">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PassWord" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CreateDate" Type="DateTime" Precision="3" />
+          <Property Name="Status" Type="Int32" />
+          <NavigationProperty Name="Auth_AdminControllerAction" Relationship="YCOT.DAL.Models.FK_Auth_AdminControllerAction_Admins" FromRole="Admins" ToRole="Auth_AdminControllerAction" />
+          <NavigationProperty Name="Auth_AdminRole" Relationship="YCOT.DAL.Models.FK_Auth_AdminRole_Admins" FromRole="Admins" ToRole="Auth_AdminRole" />
+        </EntityType>
+        <EntityType Name="Auth_AdminControllerAction">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AdminID" Type="Int32" Nullable="false" />
+          <Property Name="ControllerActionID" Type="Int32" Nullable="false" />
+          <Property Name="IsRefuse" Type="Boolean" />
+          <NavigationProperty Name="Admins" Relationship="YCOT.DAL.Models.FK_Auth_AdminControllerAction_Admins" FromRole="Auth_AdminControllerAction" ToRole="Admins" />
+          <NavigationProperty Name="Auth_ControllerActions" Relationship="YCOT.DAL.Models.FK_Auth_AdminControllerAction_Auth_ControllerActions" FromRole="Auth_AdminControllerAction" ToRole="Auth_ControllerActions" />
+        </EntityType>
+        <EntityType Name="Auth_AdminRole">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AdminID" Type="Int32" Nullable="false" />
+          <Property Name="RoleID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Admins" Relationship="YCOT.DAL.Models.FK_Auth_AdminRole_Admins" FromRole="Auth_AdminRole" ToRole="Admins" />
+          <NavigationProperty Name="Auth_Roles" Relationship="YCOT.DAL.Models.FK_Auth_AdminRole_Auth_Roles" FromRole="Auth_AdminRole" ToRole="Auth_Roles" />
+        </EntityType>
+        <EntityType Name="Auth_ControllerActionRole">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RoleID" Type="Int32" Nullable="false" />
+          <Property Name="ControllerActionID" Type="Int32" Nullable="false" />
+          <Property Name="IsRefuse" Type="Boolean" />
+          <NavigationProperty Name="Auth_ControllerActions" Relationship="YCOT.DAL.Models.FK_Auth_ControllerActionRole_Auth_ControllerActions" FromRole="Auth_ControllerActionRole" ToRole="Auth_ControllerActions" />
+          <NavigationProperty Name="Auth_Roles" Relationship="YCOT.DAL.Models.FK_Auth_ControllerActionRole_Auth_Roles" FromRole="Auth_ControllerActionRole" ToRole="Auth_Roles" />
+        </EntityType>
+        <EntityType Name="Auth_ControllerActions">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="IsController" Type="Boolean" />
+          <Property Name="IsAllowedNoneRoles" Type="Boolean" />
+          <Property Name="IsAllowedAllRoles" Type="Boolean" />
+          <Property Name="ControllerName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Auth_AdminControllerAction" Relationship="YCOT.DAL.Models.FK_Auth_AdminControllerAction_Auth_ControllerActions" FromRole="Auth_ControllerActions" ToRole="Auth_AdminControllerAction" />
+          <NavigationProperty Name="Auth_ControllerActionRole" Relationship="YCOT.DAL.Models.FK_Auth_ControllerActionRole_Auth_ControllerActions" FromRole="Auth_ControllerActions" ToRole="Auth_ControllerActionRole" />
+        </EntityType>
+        <EntityType Name="Auth_Roles">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Auth_AdminRole" Relationship="YCOT.DAL.Models.FK_Auth_AdminRole_Auth_Roles" FromRole="Auth_Roles" ToRole="Auth_AdminRole" />
+          <NavigationProperty Name="Auth_ControllerActionRole" Relationship="YCOT.DAL.Models.FK_Auth_ControllerActionRole_Auth_Roles" FromRole="Auth_Roles" ToRole="Auth_ControllerActionRole" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK_Auth_AdminControllerAction_Admins">
+          <End Role="Admins" Type="YCOT.DAL.Models.Admins" Multiplicity="1" />
+          <End Role="Auth_AdminControllerAction" Type="YCOT.DAL.Models.Auth_AdminControllerAction" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Admins">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Auth_AdminControllerAction">
+              <PropertyRef Name="ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Auth_AdminRole_Admins">
+          <End Role="Admins" Type="YCOT.DAL.Models.Admins" Multiplicity="1" />
+          <End Role="Auth_AdminRole" Type="YCOT.DAL.Models.Auth_AdminRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Admins">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Auth_AdminRole">
+              <PropertyRef Name="AdminID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Auth_AdminControllerAction_Auth_ControllerActions">
+          <End Role="Auth_ControllerActions" Type="YCOT.DAL.Models.Auth_ControllerActions" Multiplicity="1" />
+          <End Role="Auth_AdminControllerAction" Type="YCOT.DAL.Models.Auth_AdminControllerAction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Auth_ControllerActions">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Auth_AdminControllerAction">
+              <PropertyRef Name="ControllerActionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Auth_AdminRole_Auth_Roles">
+          <End Role="Auth_Roles" Type="YCOT.DAL.Models.Auth_Roles" Multiplicity="1" />
+          <End Role="Auth_AdminRole" Type="YCOT.DAL.Models.Auth_AdminRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Auth_Roles">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Auth_AdminRole">
+              <PropertyRef Name="RoleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Auth_ControllerActionRole_Auth_ControllerActions">
+          <End Role="Auth_ControllerActions" Type="YCOT.DAL.Models.Auth_ControllerActions" Multiplicity="1" />
+          <End Role="Auth_ControllerActionRole" Type="YCOT.DAL.Models.Auth_ControllerActionRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Auth_ControllerActions">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Auth_ControllerActionRole">
+              <PropertyRef Name="ControllerActionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Auth_ControllerActionRole_Auth_Roles">
+          <End Role="Auth_Roles" Type="YCOT.DAL.Models.Auth_Roles" Multiplicity="1" />
+          <End Role="Auth_ControllerActionRole" Type="YCOT.DAL.Models.Auth_ControllerActionRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Auth_Roles">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Auth_ControllerActionRole">
+              <PropertyRef Name="RoleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="YCOTDALModelsStoreContainer" CdmEntityContainer="YCOT_DataEntities">
+          <EntitySetMapping Name="Admins">
+            <EntityTypeMapping TypeName="YCOT.DAL.Models.Admins">
+              <MappingFragment StoreEntitySet="Admins">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="PassWord" ColumnName="PassWord" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Auth_AdminControllerAction">
+            <EntityTypeMapping TypeName="YCOT.DAL.Models.Auth_AdminControllerAction">
+              <MappingFragment StoreEntitySet="Auth_AdminControllerAction">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="AdminID" ColumnName="AdminID" />
+                <ScalarProperty Name="ControllerActionID" ColumnName="ControllerActionID" />
+                <ScalarProperty Name="IsRefuse" ColumnName="IsRefuse" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Auth_AdminRole">
+            <EntityTypeMapping TypeName="YCOT.DAL.Models.Auth_AdminRole">
+              <MappingFragment StoreEntitySet="Auth_AdminRole">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="AdminID" ColumnName="AdminID" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Auth_ControllerActionRole">
+            <EntityTypeMapping TypeName="YCOT.DAL.Models.Auth_ControllerActionRole">
+              <MappingFragment StoreEntitySet="Auth_ControllerActionRole">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="ControllerActionID" ColumnName="ControllerActionID" />
+                <ScalarProperty Name="IsRefuse" ColumnName="IsRefuse" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Auth_ControllerActions">
+            <EntityTypeMapping TypeName="YCOT.DAL.Models.Auth_ControllerActions">
+              <MappingFragment StoreEntitySet="Auth_ControllerActions">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="IsController" ColumnName="IsController" />
+                <ScalarProperty Name="IsAllowedNoneRoles" ColumnName="IsAllowedNoneRoles" />
+                <ScalarProperty Name="IsAllowedAllRoles" ColumnName="IsAllowedAllRoles" />
+                <ScalarProperty Name="ControllerName" ColumnName="ControllerName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Auth_Roles">
+            <EntityTypeMapping TypeName="YCOT.DAL.Models.Auth_Roles">
+              <MappingFragment StoreEntitySet="Auth_Roles">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="YCOT.DAL.Models.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

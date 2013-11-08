@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="26529b214d6641e8b0b56b752acb4ccc" Name="关系图1">
+        <EntityTypeShape EntityType="YCOT.DAL.Models.Admins" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="YCOT.DAL.Models.Auth_AdminControllerAction" Width="1.5" PointX="3" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="YCOT.DAL.Models.Auth_AdminRole" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="YCOT.DAL.Models.Auth_ControllerActionRole" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="YCOT.DAL.Models.Auth_ControllerActions" Width="1.5" PointX="0.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="YCOT.DAL.Models.Auth_Roles" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="YCOT.DAL.Models.sysdiagrams" Width="1.5" PointX="5.75" PointY="2.125" IsExpanded="true" />
+        <AssociationConnector Association="YCOT.DAL.Models.FK_Auth_AdminControllerAction_Admins" ManuallyRouted="false" />
+        <AssociationConnector Association="YCOT.DAL.Models.FK_Auth_AdminRole_Admins" ManuallyRouted="false" />
+        <AssociationConnector Association="YCOT.DAL.Models.FK_Auth_AdminControllerAction_Auth_ControllerActions" ManuallyRouted="false" />
+        <AssociationConnector Association="YCOT.DAL.Models.FK_Auth_AdminRole_Auth_Roles" ManuallyRouted="false" />
+        <AssociationConnector Association="YCOT.DAL.Models.FK_Auth_ControllerActionRole_Auth_ControllerActions" ManuallyRouted="false" />
+        <AssociationConnector Association="YCOT.DAL.Models.FK_Auth_ControllerActionRole_Auth_Roles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

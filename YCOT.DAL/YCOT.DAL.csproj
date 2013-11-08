@@ -30,8 +30,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.1\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.1\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -39,7 +49,67 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admins.cs">
+      <DependentUpon>YCOT_Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Auth_AdminControllerAction.cs">
+      <DependentUpon>YCOT_Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Auth_AdminRole.cs">
+      <DependentUpon>YCOT_Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Auth_ControllerActionRole.cs">
+      <DependentUpon>YCOT_Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Auth_ControllerActions.cs">
+      <DependentUpon>YCOT_Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Auth_Roles.cs">
+      <DependentUpon>YCOT_Data.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>YCOT_Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YCOT_Data.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YCOT_Data.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YCOT_Data.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YCOT_Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YCOT_Data.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YCOT_Data.edmx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <EntityDeploy Include="YCOT_Data.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>YCOT_Data.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="YCOT_Data.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>YCOT_Data.edmx</DependentUpon>
+      <LastGenOutput>YCOT_Data.Context.cs</LastGenOutput>
+    </None>
+    <None Include="YCOT_Data.edmx.diagram">
+      <DependentUpon>YCOT_Data.edmx</DependentUpon>
+    </None>
+    <None Include="YCOT_Data.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>YCOT_Data.edmx</DependentUpon>
+      <LastGenOutput>YCOT_Data.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

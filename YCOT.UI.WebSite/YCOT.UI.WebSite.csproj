@@ -213,6 +213,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\TodoController.cs" />
     <Compile Include="Controllers\TodoListController.cs" />
+    <Compile Include="Filters\AuthOrRoleAttribute.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Filters\ValidateHttpAntiForgeryTokenAttribute.cs" />
     <Compile Include="Global.asax.cs">
@@ -369,6 +370,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\YCOT.BLL\YCOT.BLL.csproj">
+      <Project>{c54e5699-f64b-4513-b76d-55ef48d05221}</Project>
+      <Name>YCOT.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YCOT.Common\YCOT.Common.csproj">
+      <Project>{388be84a-5dbb-4594-bf6a-bc6ac5133374}</Project>
+      <Name>YCOT.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YCOT.DAL\YCOT.DAL.csproj">
+      <Project>{03288872-ddc2-4cb1-81cd-4ff1e3ca4a62}</Project>
+      <Name>YCOT.DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
