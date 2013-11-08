@@ -1,3 +1,6 @@
-SAB
+YCOT
 ===================================  
-### ×¢Òâ!!!ÏÂÃæËùÓÐÓï·¨µÄÌáÊ¾ÎÒ¶¼ÏÈÓÃÐ¡±êÌâÌáÐÑÁË!!!
+### Asp.Net MVC æƒé™ç®¡ç†!!!
+å¼•ç”¨é¡¹ç›®ï¼š
+	1.BootStarp
+	2.EntityFramework
