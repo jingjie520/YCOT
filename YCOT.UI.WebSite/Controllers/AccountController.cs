@@ -13,7 +13,7 @@ using YCOT.UI.WebSite.Models;
 namespace YCOT.UI.WebSite.Controllers
 {
     [Authorize]
-    [InitializeSimpleMembership]
+    //[InitializeSimpleMembership]
     public class AccountController : Controller
     {
         //
