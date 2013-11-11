@@ -1,0 +1,1592 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc12="http://www.w3.org/2003/05/soap-encoding" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope" xmlns:tns="http://asms.vetech.cn/B2CMemberWebService" xmlns:soapenc11="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/" targetNamespace="http://asms.vetech.cn/B2CMemberWebService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://asms.vetech.cn/B2CMemberWebService">
+      <xsd:element name="singleFrequentFlyerSearch">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="singleFrequentFlyerSearchResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="cancelTicketOrder">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="cancelTicketOrderResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hotelOrdersDetailSearch">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hotelOrdersDetailSearchResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="searchTourismOrder">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="searchTourismOrderResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="checkMember">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="checkMemberResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="cancelApprOrder">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="cancelApprOrderResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="cancelTravelOrder">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="cancelTravelOrderResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getPassWordBySj">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getPassWordBySjResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ticketOrdersDetailSearch">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ticketOrdersDetailSearchResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="syncMember">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="syncMemberResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="cancelTourismOrder">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="cancelTourismOrderResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="findSpecialOrder">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="findSpecialOrderResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteFrequentFlyer">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteFrequentFlyerResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hotelOrdersDetailSearchBy">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hotelOrdersDetailSearchByResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="singlePointExchangeSearch">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="singlePointExchangeSearchResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ticketRequirementDetailSearch">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ticketRequirementDetailSearchResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="querySpecialOrders">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="querySpecialOrdersResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="pointsExchangeRecordsSearch">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="pointsExchangeRecordsSearchResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="login">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="loginResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="singlePointDetailSearch">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="singlePointDetailSearchResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ticketDynamic">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ticketDynamicResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="repeatUsername">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="repeatUsernameResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="cancleSpecialOrder">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="cancleSpecialOrderResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="travelOrdersSearch">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="travelOrdersSearchResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ticketOrdersSearchByType">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ticketOrdersSearchByTypeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getAdviseList">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getAdviseListResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="modifySpecialOrder">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="modifySpecialOrderResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="syncEciticLogin">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="syncEciticLoginResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="registration">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="registrationResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="memberAdvise">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="memberAdviseResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getMembers">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getMembersResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="pointsDetailsSearch">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="pointsDetailsSearchResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="cancelHotelOrder">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="cancelHotelOrderResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="checkOrderStatus">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="checkOrderStatusResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="travelOrdersDetailSearch">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="travelOrdersDetailSearchResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ticketOrdersSearch">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ticketOrdersSearchResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="queryTraveler">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="queryTravelerResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="frequentFlyerSearch">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="frequentFlyerSearchResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="infoPassModify">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="infoPassModifyResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="forgetPass">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="forgetPassResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hotelOrdersSearch">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hotelOrdersSearchResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ticketRequirementSearch">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ticketRequirementSearchResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="pointsSearch">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="pointsSearchResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="frequentFlyerAddOrModify">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="frequentFlyerAddOrModifyResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="checkFrequentFlyer">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="checkFrequentFlyerResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="searchTourismOrderResponse">
+    <wsdl:part name="parameters" element="tns:searchTourismOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="ticketRequirementDetailSearchRequest">
+    <wsdl:part name="parameters" element="tns:ticketRequirementDetailSearch" />
+  </wsdl:message>
+  <wsdl:message name="ticketOrdersSearchResponse">
+    <wsdl:part name="parameters" element="tns:ticketOrdersSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteFrequentFlyerResponse">
+    <wsdl:part name="parameters" element="tns:deleteFrequentFlyerResponse" />
+  </wsdl:message>
+  <wsdl:message name="singlePointDetailSearchResponse">
+    <wsdl:part name="parameters" element="tns:singlePointDetailSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="queryTravelerResponse">
+    <wsdl:part name="parameters" element="tns:queryTravelerResponse" />
+  </wsdl:message>
+  <wsdl:message name="checkFrequentFlyerRequest">
+    <wsdl:part name="parameters" element="tns:checkFrequentFlyer" />
+  </wsdl:message>
+  <wsdl:message name="pointsSearchResponse">
+    <wsdl:part name="parameters" element="tns:pointsSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="memberAdviseResponse">
+    <wsdl:part name="parameters" element="tns:memberAdviseResponse" />
+  </wsdl:message>
+  <wsdl:message name="cancleSpecialOrderRequest">
+    <wsdl:part name="parameters" element="tns:cancleSpecialOrder" />
+  </wsdl:message>
+  <wsdl:message name="singleFrequentFlyerSearchRequest">
+    <wsdl:part name="parameters" element="tns:singleFrequentFlyerSearch" />
+  </wsdl:message>
+  <wsdl:message name="cancleSpecialOrderResponse">
+    <wsdl:part name="parameters" element="tns:cancleSpecialOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPassWordBySjRequest">
+    <wsdl:part name="parameters" element="tns:getPassWordBySj" />
+  </wsdl:message>
+  <wsdl:message name="singleFrequentFlyerSearchResponse">
+    <wsdl:part name="parameters" element="tns:singleFrequentFlyerSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="infoPassModifyResponse">
+    <wsdl:part name="parameters" element="tns:infoPassModifyResponse" />
+  </wsdl:message>
+  <wsdl:message name="searchTourismOrderRequest">
+    <wsdl:part name="parameters" element="tns:searchTourismOrder" />
+  </wsdl:message>
+  <wsdl:message name="hotelOrdersDetailSearchByResponse">
+    <wsdl:part name="parameters" element="tns:hotelOrdersDetailSearchByResponse" />
+  </wsdl:message>
+  <wsdl:message name="getMembersResponse">
+    <wsdl:part name="parameters" element="tns:getMembersResponse" />
+  </wsdl:message>
+  <wsdl:message name="checkFrequentFlyerResponse">
+    <wsdl:part name="parameters" element="tns:checkFrequentFlyerResponse" />
+  </wsdl:message>
+  <wsdl:message name="pointsExchangeRecordsSearchRequest">
+    <wsdl:part name="parameters" element="tns:pointsExchangeRecordsSearch" />
+  </wsdl:message>
+  <wsdl:message name="repeatUsernameResponse">
+    <wsdl:part name="parameters" element="tns:repeatUsernameResponse" />
+  </wsdl:message>
+  <wsdl:message name="cancelTravelOrderRequest">
+    <wsdl:part name="parameters" element="tns:cancelTravelOrder" />
+  </wsdl:message>
+  <wsdl:message name="singlePointExchangeSearchRequest">
+    <wsdl:part name="parameters" element="tns:singlePointExchangeSearch" />
+  </wsdl:message>
+  <wsdl:message name="forgetPassResponse">
+    <wsdl:part name="parameters" element="tns:forgetPassResponse" />
+  </wsdl:message>
+  <wsdl:message name="modifySpecialOrderResponse">
+    <wsdl:part name="parameters" element="tns:modifySpecialOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="loginRequest">
+    <wsdl:part name="parameters" element="tns:login" />
+  </wsdl:message>
+  <wsdl:message name="cancelHotelOrderResponse">
+    <wsdl:part name="parameters" element="tns:cancelHotelOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="singlePointExchangeSearchResponse">
+    <wsdl:part name="parameters" element="tns:singlePointExchangeSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="cancelTourismOrderResponse">
+    <wsdl:part name="parameters" element="tns:cancelTourismOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteFrequentFlyerRequest">
+    <wsdl:part name="parameters" element="tns:deleteFrequentFlyer" />
+  </wsdl:message>
+  <wsdl:message name="getPassWordBySjResponse">
+    <wsdl:part name="parameters" element="tns:getPassWordBySjResponse" />
+  </wsdl:message>
+  <wsdl:message name="travelOrdersDetailSearchResponse">
+    <wsdl:part name="parameters" element="tns:travelOrdersDetailSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="pointsDetailsSearchRequest">
+    <wsdl:part name="parameters" element="tns:pointsDetailsSearch" />
+  </wsdl:message>
+  <wsdl:message name="memberAdviseRequest">
+    <wsdl:part name="parameters" element="tns:memberAdvise" />
+  </wsdl:message>
+  <wsdl:message name="getMembersRequest">
+    <wsdl:part name="parameters" element="tns:getMembers" />
+  </wsdl:message>
+  <wsdl:message name="hotelOrdersSearchRequest">
+    <wsdl:part name="parameters" element="tns:hotelOrdersSearch" />
+  </wsdl:message>
+  <wsdl:message name="cancelHotelOrderRequest">
+    <wsdl:part name="parameters" element="tns:cancelHotelOrder" />
+  </wsdl:message>
+  <wsdl:message name="ticketRequirementSearchRequest">
+    <wsdl:part name="parameters" element="tns:ticketRequirementSearch" />
+  </wsdl:message>
+  <wsdl:message name="ticketOrdersSearchByTypeRequest">
+    <wsdl:part name="parameters" element="tns:ticketOrdersSearchByType" />
+  </wsdl:message>
+  <wsdl:message name="ticketDynamicResponse">
+    <wsdl:part name="parameters" element="tns:ticketDynamicResponse" />
+  </wsdl:message>
+  <wsdl:message name="repeatUsernameRequest">
+    <wsdl:part name="parameters" element="tns:repeatUsername" />
+  </wsdl:message>
+  <wsdl:message name="ticketOrdersSearchRequest">
+    <wsdl:part name="parameters" element="tns:ticketOrdersSearch" />
+  </wsdl:message>
+  <wsdl:message name="hotelOrdersDetailSearchByRequest">
+    <wsdl:part name="parameters" element="tns:hotelOrdersDetailSearchBy" />
+  </wsdl:message>
+  <wsdl:message name="querySpecialOrdersRequest">
+    <wsdl:part name="parameters" element="tns:querySpecialOrders" />
+  </wsdl:message>
+  <wsdl:message name="getAdviseListRequest">
+    <wsdl:part name="parameters" element="tns:getAdviseList" />
+  </wsdl:message>
+  <wsdl:message name="frequentFlyerAddOrModifyRequest">
+    <wsdl:part name="parameters" element="tns:frequentFlyerAddOrModify" />
+  </wsdl:message>
+  <wsdl:message name="registrationResponse">
+    <wsdl:part name="parameters" element="tns:registrationResponse" />
+  </wsdl:message>
+  <wsdl:message name="forgetPassRequest">
+    <wsdl:part name="parameters" element="tns:forgetPass" />
+  </wsdl:message>
+  <wsdl:message name="checkMemberResponse">
+    <wsdl:part name="parameters" element="tns:checkMemberResponse" />
+  </wsdl:message>
+  <wsdl:message name="ticketDynamicRequest">
+    <wsdl:part name="parameters" element="tns:ticketDynamic" />
+  </wsdl:message>
+  <wsdl:message name="cancelTicketOrderRequest">
+    <wsdl:part name="parameters" element="tns:cancelTicketOrder" />
+  </wsdl:message>
+  <wsdl:message name="ticketRequirementDetailSearchResponse">
+    <wsdl:part name="parameters" element="tns:ticketRequirementDetailSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="checkMemberRequest">
+    <wsdl:part name="parameters" element="tns:checkMember" />
+  </wsdl:message>
+  <wsdl:message name="singlePointDetailSearchRequest">
+    <wsdl:part name="parameters" element="tns:singlePointDetailSearch" />
+  </wsdl:message>
+  <wsdl:message name="travelOrdersSearchResponse">
+    <wsdl:part name="parameters" element="tns:travelOrdersSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="modifySpecialOrderRequest">
+    <wsdl:part name="parameters" element="tns:modifySpecialOrder" />
+  </wsdl:message>
+  <wsdl:message name="cancelTourismOrderRequest">
+    <wsdl:part name="parameters" element="tns:cancelTourismOrder" />
+  </wsdl:message>
+  <wsdl:message name="pointsDetailsSearchResponse">
+    <wsdl:part name="parameters" element="tns:pointsDetailsSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="cancelApprOrderRequest">
+    <wsdl:part name="parameters" element="tns:cancelApprOrder" />
+  </wsdl:message>
+  <wsdl:message name="travelOrdersDetailSearchRequest">
+    <wsdl:part name="parameters" element="tns:travelOrdersDetailSearch" />
+  </wsdl:message>
+  <wsdl:message name="checkOrderStatusRequest">
+    <wsdl:part name="parameters" element="tns:checkOrderStatus" />
+  </wsdl:message>
+  <wsdl:message name="frequentFlyerAddOrModifyResponse">
+    <wsdl:part name="parameters" element="tns:frequentFlyerAddOrModifyResponse" />
+  </wsdl:message>
+  <wsdl:message name="syncMemberResponse">
+    <wsdl:part name="parameters" element="tns:syncMemberResponse" />
+  </wsdl:message>
+  <wsdl:message name="cancelTicketOrderResponse">
+    <wsdl:part name="parameters" element="tns:cancelTicketOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="pointsExchangeRecordsSearchResponse">
+    <wsdl:part name="parameters" element="tns:pointsExchangeRecordsSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="travelOrdersSearchRequest">
+    <wsdl:part name="parameters" element="tns:travelOrdersSearch" />
+  </wsdl:message>
+  <wsdl:message name="ticketOrdersDetailSearchRequest">
+    <wsdl:part name="parameters" element="tns:ticketOrdersDetailSearch" />
+  </wsdl:message>
+  <wsdl:message name="getAdviseListResponse">
+    <wsdl:part name="parameters" element="tns:getAdviseListResponse" />
+  </wsdl:message>
+  <wsdl:message name="findSpecialOrderRequest">
+    <wsdl:part name="parameters" element="tns:findSpecialOrder" />
+  </wsdl:message>
+  <wsdl:message name="hotelOrdersSearchResponse">
+    <wsdl:part name="parameters" element="tns:hotelOrdersSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="frequentFlyerSearchResponse">
+    <wsdl:part name="parameters" element="tns:frequentFlyerSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="syncEciticLoginRequest">
+    <wsdl:part name="parameters" element="tns:syncEciticLogin" />
+  </wsdl:message>
+  <wsdl:message name="frequentFlyerSearchRequest">
+    <wsdl:part name="parameters" element="tns:frequentFlyerSearch" />
+  </wsdl:message>
+  <wsdl:message name="hotelOrdersDetailSearchResponse">
+    <wsdl:part name="parameters" element="tns:hotelOrdersDetailSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="querySpecialOrdersResponse">
+    <wsdl:part name="parameters" element="tns:querySpecialOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="loginResponse">
+    <wsdl:part name="parameters" element="tns:loginResponse" />
+  </wsdl:message>
+  <wsdl:message name="ticketRequirementSearchResponse">
+    <wsdl:part name="parameters" element="tns:ticketRequirementSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="syncMemberRequest">
+    <wsdl:part name="parameters" element="tns:syncMember" />
+  </wsdl:message>
+  <wsdl:message name="infoPassModifyRequest">
+    <wsdl:part name="parameters" element="tns:infoPassModify" />
+  </wsdl:message>
+  <wsdl:message name="hotelOrdersDetailSearchRequest">
+    <wsdl:part name="parameters" element="tns:hotelOrdersDetailSearch" />
+  </wsdl:message>
+  <wsdl:message name="findSpecialOrderResponse">
+    <wsdl:part name="parameters" element="tns:findSpecialOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="pointsSearchRequest">
+    <wsdl:part name="parameters" element="tns:pointsSearch" />
+  </wsdl:message>
+  <wsdl:message name="syncEciticLoginResponse">
+    <wsdl:part name="parameters" element="tns:syncEciticLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="cancelTravelOrderResponse">
+    <wsdl:part name="parameters" element="tns:cancelTravelOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="queryTravelerRequest">
+    <wsdl:part name="parameters" element="tns:queryTraveler" />
+  </wsdl:message>
+  <wsdl:message name="checkOrderStatusResponse">
+    <wsdl:part name="parameters" element="tns:checkOrderStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="registrationRequest">
+    <wsdl:part name="parameters" element="tns:registration" />
+  </wsdl:message>
+  <wsdl:message name="ticketOrdersSearchByTypeResponse">
+    <wsdl:part name="parameters" element="tns:ticketOrdersSearchByTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ticketOrdersDetailSearchResponse">
+    <wsdl:part name="parameters" element="tns:ticketOrdersDetailSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="cancelApprOrderResponse">
+    <wsdl:part name="parameters" element="tns:cancelApprOrderResponse" />
+  </wsdl:message>
+  <wsdl:portType name="B2CMemberWebServicePortType">
+    <wsdl:operation name="singleFrequentFlyerSearch">
+      <wsdl:input name="singleFrequentFlyerSearchRequest" message="tns:singleFrequentFlyerSearchRequest" />
+      <wsdl:output name="singleFrequentFlyerSearchResponse" message="tns:singleFrequentFlyerSearchResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="cancelTicketOrder">
+      <wsdl:input name="cancelTicketOrderRequest" message="tns:cancelTicketOrderRequest" />
+      <wsdl:output name="cancelTicketOrderResponse" message="tns:cancelTicketOrderResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="hotelOrdersDetailSearch">
+      <wsdl:input name="hotelOrdersDetailSearchRequest" message="tns:hotelOrdersDetailSearchRequest" />
+      <wsdl:output name="hotelOrdersDetailSearchResponse" message="tns:hotelOrdersDetailSearchResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="searchTourismOrder">
+      <wsdl:input name="searchTourismOrderRequest" message="tns:searchTourismOrderRequest" />
+      <wsdl:output name="searchTourismOrderResponse" message="tns:searchTourismOrderResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="checkMember">
+      <wsdl:input name="checkMemberRequest" message="tns:checkMemberRequest" />
+      <wsdl:output name="checkMemberResponse" message="tns:checkMemberResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="cancelApprOrder">
+      <wsdl:input name="cancelApprOrderRequest" message="tns:cancelApprOrderRequest" />
+      <wsdl:output name="cancelApprOrderResponse" message="tns:cancelApprOrderResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="cancelTravelOrder">
+      <wsdl:input name="cancelTravelOrderRequest" message="tns:cancelTravelOrderRequest" />
+      <wsdl:output name="cancelTravelOrderResponse" message="tns:cancelTravelOrderResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getPassWordBySj">
+      <wsdl:input name="getPassWordBySjRequest" message="tns:getPassWordBySjRequest" />
+      <wsdl:output name="getPassWordBySjResponse" message="tns:getPassWordBySjResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ticketOrdersDetailSearch">
+      <wsdl:input name="ticketOrdersDetailSearchRequest" message="tns:ticketOrdersDetailSearchRequest" />
+      <wsdl:output name="ticketOrdersDetailSearchResponse" message="tns:ticketOrdersDetailSearchResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="syncMember">
+      <wsdl:input name="syncMemberRequest" message="tns:syncMemberRequest" />
+      <wsdl:output name="syncMemberResponse" message="tns:syncMemberResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="cancelTourismOrder">
+      <wsdl:input name="cancelTourismOrderRequest" message="tns:cancelTourismOrderRequest" />
+      <wsdl:output name="cancelTourismOrderResponse" message="tns:cancelTourismOrderResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="findSpecialOrder">
+      <wsdl:input name="findSpecialOrderRequest" message="tns:findSpecialOrderRequest" />
+      <wsdl:output name="findSpecialOrderResponse" message="tns:findSpecialOrderResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteFrequentFlyer">
+      <wsdl:input name="deleteFrequentFlyerRequest" message="tns:deleteFrequentFlyerRequest" />
+      <wsdl:output name="deleteFrequentFlyerResponse" message="tns:deleteFrequentFlyerResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="hotelOrdersDetailSearchBy">
+      <wsdl:input name="hotelOrdersDetailSearchByRequest" message="tns:hotelOrdersDetailSearchByRequest" />
+      <wsdl:output name="hotelOrdersDetailSearchByResponse" message="tns:hotelOrdersDetailSearchByResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="singlePointExchangeSearch">
+      <wsdl:input name="singlePointExchangeSearchRequest" message="tns:singlePointExchangeSearchRequest" />
+      <wsdl:output name="singlePointExchangeSearchResponse" message="tns:singlePointExchangeSearchResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ticketRequirementDetailSearch">
+      <wsdl:input name="ticketRequirementDetailSearchRequest" message="tns:ticketRequirementDetailSearchRequest" />
+      <wsdl:output name="ticketRequirementDetailSearchResponse" message="tns:ticketRequirementDetailSearchResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="querySpecialOrders">
+      <wsdl:input name="querySpecialOrdersRequest" message="tns:querySpecialOrdersRequest" />
+      <wsdl:output name="querySpecialOrdersResponse" message="tns:querySpecialOrdersResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="pointsExchangeRecordsSearch">
+      <wsdl:input name="pointsExchangeRecordsSearchRequest" message="tns:pointsExchangeRecordsSearchRequest" />
+      <wsdl:output name="pointsExchangeRecordsSearchResponse" message="tns:pointsExchangeRecordsSearchResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <wsdl:input name="loginRequest" message="tns:loginRequest" />
+      <wsdl:output name="loginResponse" message="tns:loginResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="singlePointDetailSearch">
+      <wsdl:input name="singlePointDetailSearchRequest" message="tns:singlePointDetailSearchRequest" />
+      <wsdl:output name="singlePointDetailSearchResponse" message="tns:singlePointDetailSearchResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ticketDynamic">
+      <wsdl:input name="ticketDynamicRequest" message="tns:ticketDynamicRequest" />
+      <wsdl:output name="ticketDynamicResponse" message="tns:ticketDynamicResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="repeatUsername">
+      <wsdl:input name="repeatUsernameRequest" message="tns:repeatUsernameRequest" />
+      <wsdl:output name="repeatUsernameResponse" message="tns:repeatUsernameResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="cancleSpecialOrder">
+      <wsdl:input name="cancleSpecialOrderRequest" message="tns:cancleSpecialOrderRequest" />
+      <wsdl:output name="cancleSpecialOrderResponse" message="tns:cancleSpecialOrderResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="travelOrdersSearch">
+      <wsdl:input name="travelOrdersSearchRequest" message="tns:travelOrdersSearchRequest" />
+      <wsdl:output name="travelOrdersSearchResponse" message="tns:travelOrdersSearchResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ticketOrdersSearchByType">
+      <wsdl:input name="ticketOrdersSearchByTypeRequest" message="tns:ticketOrdersSearchByTypeRequest" />
+      <wsdl:output name="ticketOrdersSearchByTypeResponse" message="tns:ticketOrdersSearchByTypeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getAdviseList">
+      <wsdl:input name="getAdviseListRequest" message="tns:getAdviseListRequest" />
+      <wsdl:output name="getAdviseListResponse" message="tns:getAdviseListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="modifySpecialOrder">
+      <wsdl:input name="modifySpecialOrderRequest" message="tns:modifySpecialOrderRequest" />
+      <wsdl:output name="modifySpecialOrderResponse" message="tns:modifySpecialOrderResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="syncEciticLogin">
+      <wsdl:input name="syncEciticLoginRequest" message="tns:syncEciticLoginRequest" />
+      <wsdl:output name="syncEciticLoginResponse" message="tns:syncEciticLoginResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="registration">
+      <wsdl:input name="registrationRequest" message="tns:registrationRequest" />
+      <wsdl:output name="registrationResponse" message="tns:registrationResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="memberAdvise">
+      <wsdl:input name="memberAdviseRequest" message="tns:memberAdviseRequest" />
+      <wsdl:output name="memberAdviseResponse" message="tns:memberAdviseResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getMembers">
+      <wsdl:input name="getMembersRequest" message="tns:getMembersRequest" />
+      <wsdl:output name="getMembersResponse" message="tns:getMembersResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="pointsDetailsSearch">
+      <wsdl:input name="pointsDetailsSearchRequest" message="tns:pointsDetailsSearchRequest" />
+      <wsdl:output name="pointsDetailsSearchResponse" message="tns:pointsDetailsSearchResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="cancelHotelOrder">
+      <wsdl:input name="cancelHotelOrderRequest" message="tns:cancelHotelOrderRequest" />
+      <wsdl:output name="cancelHotelOrderResponse" message="tns:cancelHotelOrderResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="checkOrderStatus">
+      <wsdl:input name="checkOrderStatusRequest" message="tns:checkOrderStatusRequest" />
+      <wsdl:output name="checkOrderStatusResponse" message="tns:checkOrderStatusResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="travelOrdersDetailSearch">
+      <wsdl:input name="travelOrdersDetailSearchRequest" message="tns:travelOrdersDetailSearchRequest" />
+      <wsdl:output name="travelOrdersDetailSearchResponse" message="tns:travelOrdersDetailSearchResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ticketOrdersSearch">
+      <wsdl:input name="ticketOrdersSearchRequest" message="tns:ticketOrdersSearchRequest" />
+      <wsdl:output name="ticketOrdersSearchResponse" message="tns:ticketOrdersSearchResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="queryTraveler">
+      <wsdl:input name="queryTravelerRequest" message="tns:queryTravelerRequest" />
+      <wsdl:output name="queryTravelerResponse" message="tns:queryTravelerResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="frequentFlyerSearch">
+      <wsdl:input name="frequentFlyerSearchRequest" message="tns:frequentFlyerSearchRequest" />
+      <wsdl:output name="frequentFlyerSearchResponse" message="tns:frequentFlyerSearchResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="infoPassModify">
+      <wsdl:input name="infoPassModifyRequest" message="tns:infoPassModifyRequest" />
+      <wsdl:output name="infoPassModifyResponse" message="tns:infoPassModifyResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="forgetPass">
+      <wsdl:input name="forgetPassRequest" message="tns:forgetPassRequest" />
+      <wsdl:output name="forgetPassResponse" message="tns:forgetPassResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="hotelOrdersSearch">
+      <wsdl:input name="hotelOrdersSearchRequest" message="tns:hotelOrdersSearchRequest" />
+      <wsdl:output name="hotelOrdersSearchResponse" message="tns:hotelOrdersSearchResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ticketRequirementSearch">
+      <wsdl:input name="ticketRequirementSearchRequest" message="tns:ticketRequirementSearchRequest" />
+      <wsdl:output name="ticketRequirementSearchResponse" message="tns:ticketRequirementSearchResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="pointsSearch">
+      <wsdl:input name="pointsSearchRequest" message="tns:pointsSearchRequest" />
+      <wsdl:output name="pointsSearchResponse" message="tns:pointsSearchResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="frequentFlyerAddOrModify">
+      <wsdl:input name="frequentFlyerAddOrModifyRequest" message="tns:frequentFlyerAddOrModifyRequest" />
+      <wsdl:output name="frequentFlyerAddOrModifyResponse" message="tns:frequentFlyerAddOrModifyResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="checkFrequentFlyer">
+      <wsdl:input name="checkFrequentFlyerRequest" message="tns:checkFrequentFlyerRequest" />
+      <wsdl:output name="checkFrequentFlyerResponse" message="tns:checkFrequentFlyerResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="B2CMemberWebServiceHttpBinding" type="tns:B2CMemberWebServicePortType">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="singleFrequentFlyerSearch">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="singleFrequentFlyerSearchRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="singleFrequentFlyerSearchResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelTicketOrder">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="cancelTicketOrderRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="cancelTicketOrderResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hotelOrdersDetailSearch">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="hotelOrdersDetailSearchRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="hotelOrdersDetailSearchResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchTourismOrder">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="searchTourismOrderRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="searchTourismOrderResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkMember">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="checkMemberRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="checkMemberResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelApprOrder">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="cancelApprOrderRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="cancelApprOrderResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelTravelOrder">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="cancelTravelOrderRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="cancelTravelOrderResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPassWordBySj">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getPassWordBySjRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getPassWordBySjResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ticketOrdersDetailSearch">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="ticketOrdersDetailSearchRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ticketOrdersDetailSearchResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="syncMember">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="syncMemberRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="syncMemberResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelTourismOrder">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="cancelTourismOrderRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="cancelTourismOrderResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findSpecialOrder">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="findSpecialOrderRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="findSpecialOrderResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteFrequentFlyer">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="deleteFrequentFlyerRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="deleteFrequentFlyerResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hotelOrdersDetailSearchBy">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="hotelOrdersDetailSearchByRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="hotelOrdersDetailSearchByResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="singlePointExchangeSearch">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="singlePointExchangeSearchRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="singlePointExchangeSearchResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ticketRequirementDetailSearch">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="ticketRequirementDetailSearchRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ticketRequirementDetailSearchResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="querySpecialOrders">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="querySpecialOrdersRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="querySpecialOrdersResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="pointsExchangeRecordsSearch">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="pointsExchangeRecordsSearchRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="pointsExchangeRecordsSearchResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="loginRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="loginResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="singlePointDetailSearch">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="singlePointDetailSearchRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="singlePointDetailSearchResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ticketDynamic">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="ticketDynamicRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ticketDynamicResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="repeatUsername">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="repeatUsernameRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="repeatUsernameResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancleSpecialOrder">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="cancleSpecialOrderRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="cancleSpecialOrderResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="travelOrdersSearch">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="travelOrdersSearchRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="travelOrdersSearchResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ticketOrdersSearchByType">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="ticketOrdersSearchByTypeRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ticketOrdersSearchByTypeResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAdviseList">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getAdviseListRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getAdviseListResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifySpecialOrder">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="modifySpecialOrderRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="modifySpecialOrderResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="syncEciticLogin">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="syncEciticLoginRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="syncEciticLoginResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registration">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="registrationRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="registrationResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="memberAdvise">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="memberAdviseRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="memberAdviseResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMembers">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getMembersRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getMembersResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="pointsDetailsSearch">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="pointsDetailsSearchRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="pointsDetailsSearchResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelHotelOrder">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="cancelHotelOrderRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="cancelHotelOrderResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkOrderStatus">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="checkOrderStatusRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="checkOrderStatusResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="travelOrdersDetailSearch">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="travelOrdersDetailSearchRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="travelOrdersDetailSearchResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ticketOrdersSearch">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="ticketOrdersSearchRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ticketOrdersSearchResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryTraveler">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="queryTravelerRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="queryTravelerResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="frequentFlyerSearch">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="frequentFlyerSearchRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="frequentFlyerSearchResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="infoPassModify">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="infoPassModifyRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="infoPassModifyResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="forgetPass">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="forgetPassRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="forgetPassResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hotelOrdersSearch">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="hotelOrdersSearchRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="hotelOrdersSearchResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ticketRequirementSearch">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="ticketRequirementSearchRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ticketRequirementSearchResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="pointsSearch">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="pointsSearchRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="pointsSearchResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="frequentFlyerAddOrModify">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="frequentFlyerAddOrModifyRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="frequentFlyerAddOrModifyResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkFrequentFlyer">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="checkFrequentFlyerRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="checkFrequentFlyerResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="B2CMemberWebService">
+    <wsdl:port name="B2CMemberWebServiceHttpPort" binding="tns:B2CMemberWebServiceHttpBinding">
+      <wsdlsoap:address location="http://192.168.2.19:8150/service/B2CMemberWebService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
